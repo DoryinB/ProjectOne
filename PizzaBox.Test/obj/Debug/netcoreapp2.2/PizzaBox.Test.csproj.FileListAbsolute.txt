@@ -1,0 +1,17 @@
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\PizzaBox.Test.deps.json
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\PizzaBox.Test.runtimeconfig.json
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\PizzaBox.Test.runtimeconfig.dev.json
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\PizzaBox.Test.dll
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\PizzaBox.Test.pdb
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\PizzaBox.Domain.dll
+C:\Revature\ProjectOne\PizzaBox.Test\bin\Debug\netcoreapp2.2\PizzaBox.Domain.pdb
+C:\Revature\ProjectOne\PizzaBox.Test\obj\Debug\netcoreapp2.2\PizzaBox.Test.csprojAssemblyReference.cache
+C:\Revature\ProjectOne\PizzaBox.Test\obj\Debug\netcoreapp2.2\PizzaBox.Test.csproj.CoreCompileInputs.cache
+C:\Revature\ProjectOne\PizzaBox.Test\obj\Debug\netcoreapp2.2\PizzaBox.Test.AssemblyInfoInputs.cache
+C:\Revature\ProjectOne\PizzaBox.Test\obj\Debug\netcoreapp2.2\PizzaBox.Test.AssemblyInfo.cs
+C:\Revature\ProjectOne\PizzaBox.Test\obj\Debug\netcoreapp2.2\PizzaBox.Test.csproj.CopyComplete
+C:\Revature\ProjectOne\PizzaBox.Test\obj\Debug\netcoreapp2.2\PizzaBox.Test.dll
+C:\Revature\ProjectOne\PizzaBox.Test\obj\Debug\netcoreapp2.2\PizzaBox.Test.pdb

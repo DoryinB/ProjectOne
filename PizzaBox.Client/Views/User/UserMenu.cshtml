@@ -1,0 +1,17 @@
+@model PizzaBox.Domain.User
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; 
+}
+
+<div class="col-md-6">
+<h2>Welcome @Model.Username!</h2>
+
+
+<!-- <a href="/Home/Login" >User</a> -->
+<a href="/History/Index" >View History</a>
+<a href="/Order/Location" >Start new order</a>
+<a href="/Home/Index" >Logout</a>
+
+</div>
+<hr>
+

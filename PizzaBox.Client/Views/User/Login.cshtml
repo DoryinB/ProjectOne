@@ -1,0 +1,27 @@
+﻿@model PizzaBox.Domain.User
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; //"../Shared/_NewLayout.cshtml";
+}
+
+<div class="col-md-6">
+<h2>Login</h2>
+<a href="/home/index" >Home</a>
+
+<!------------->
+<form action="/user/login" method="post">
+  Username:<br>
+  <input type="text" id ="Username" name="Username" /><br>
+  <button type="submit">Login</button>
+    <!-- To set value: -->
+    <!-- username_txt.Value=""; -->
+
+</form>
+<!------------->
+
+<h3>Not a user? Register below</h3>
+<a title="register" href="Register" >Register</a>
+
+</div>
+<hr>
+

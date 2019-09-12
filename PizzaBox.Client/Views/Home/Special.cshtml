@@ -1,0 +1,49 @@
+@model PizzaBox.Domain.Crust
+
+<form action="/crust/create" method="post">
+<!-- html helper all you have to do is give property -- snippet of code -->
+@Html.ValidationMessageFor(m => m.CrustName)
+  <label for = "name">Name</label>
+  <input type="text" id="name" name="name" asp-for="@Model.CrustName" value="write something" placeholder="Yo Name" pattern="a-z">
+  <!-- <input type="text" id="name" name="name" reference obj prop--asp-for="Model.ViewBread--Model.Bread[0].Name" value="write something" placeholder="Yo Name" pattern="a-z"> -->
+  <!-- Html.TextBoxFor(m => m.Name) -->
+  <!-- required> -->
+  
+  <span asp-validation-for="@Model.CrustName"></span>
+  <label for = "price">Price</label>
+  <input type="number" id="price" name="price">
+
+  <!--  -->
+  <fieldset name="Checkbox">
+    <!-- as many as you want [usually <=10]-->
+    <label><input type="checkbox" name="bread" value="baked">Baked</label>
+    <label><input type="checkbox" name="bread" value="toasted">Toasted</label>
+    <label><input type="checkbox" name="bread" value="other">Other</label>
+  </fieldset>
+
+  <fieldset name="Radiobutton">
+    <!-- only one [usually <=10]-->
+    <label><input type="radio" name="oven" value="brick">Baked</label>    
+    <label><input type="radio" name="oven" value="coal">Toasted</label>
+  </fieldset>
+
+  <fieldset name="Select">
+    <!-- one or more [>10]-->
+    <label>Baked</label>   
+    <select>
+      <!-- <select multiple> -->
+      <option label="USA" value="usa">USA</option>
+      <option label="CANADA" value="canada">Canada</option>
+      <option label="Mexico" value="mexico">Mexico</option>
+    </select>
+  </fieldset>
+  <!--  -->
+
+  <button typer="submit">submit</button>
+
+
+  <!-- Html.AntiForgeryToken() -->
+  <!-- create validateion token -->
+</form>
+
+@Html.Partial("../Shared/_ValidationScriptsPartial.cshtml")

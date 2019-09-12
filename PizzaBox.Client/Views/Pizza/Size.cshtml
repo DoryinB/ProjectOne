@@ -1,0 +1,27 @@
+@using PizzaBox.Data;
+
+@model PizzaBox.Domain.Size
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; //"../Shared/_NewLayout.cshtml";
+  PizzaBoxDbContext _db = new PizzaBoxDbContext();
+  List<PizzaBox.Domain.Size> sizeList = _db.Size.ToList();
+}
+
+
+<form action="/Pizza/Size" method="post">
+  <fieldset name="SizeId">
+    <!-- one or more [>10]-->
+    <label>Location</label>   
+    <select  id ="SizeId" name="SizeId">
+      <!-- <select multiple> -->
+        @foreach (var l in sizeList)
+        {<option label=@l.SizeName value=@l.SizeId>@l.SizeName</option>}
+    </select>
+  </fieldset>
+
+  <button typer="submit">submit</button>
+
+  <!-- Html.AntiForgeryToken() -->
+  <!-- create validateion token -->
+</form>

@@ -1,0 +1,61 @@
+@using PizzaBox.Data
+
+<!-- model List<PizzaBox.Domain.Pizza> -->
+@model PizzaBox.Domain.History
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; 
+  PizzaBoxDbContext _db = new PizzaBoxDbContext();
+}
+
+<div class="col-md-6">
+<h2>You have selected a</h2>
+  
+  @{
+    foreach(var p in _db.Pizza.ToList())
+    {
+      if(p.OrderId==Model.OrderId)
+      {
+        foreach (var s in _db.Size.ToList())
+        {
+          if(s.SizeId==p.SizeId)
+          {<p>@s.SizeName</p>}
+        }
+        foreach (var c in _db.Crust.ToList())
+        {
+          if(c.CrustId==@p.CrustId)
+          {<p>@c.CrustName</p>
+           <p>crust pizza with</p>}
+        }
+  //----------------
+      foreach (var tO in _db.ToppingsOrder.ToList())
+      {
+        if (p.PizzaId==tO.PizzaId)
+        {
+          foreach (var top in _db.Topping.ToList())
+          {
+            if(tO.ToppingId==top.ToppingId)
+            {<p>@top.ToppingsName</p>}
+          }
+        }
+      }
+//----------------
+      }
+    }
+  }
+
+  <!-- <h2>Model.SizeId</h2>
+  <h2>Model.CrustId</h2> -->
+  
+  
+  
+
+  
+
+
+<!-- <a href="/Home/Login" >User</a> -->
+<a href="/Home/Index" >Home</a>
+
+</div>
+<hr>
+

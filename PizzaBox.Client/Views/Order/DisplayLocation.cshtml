@@ -1,0 +1,18 @@
+@model PizzaBox.Domain.Location
+<!-- String -->
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; 
+}
+
+<div class="col-md-6">
+<h2>You have selected @Model.LocationName!</h2>
+
+
+<!-- <a href="/Home/Login" >User</a> -->
+<a href="/Order/Index" >View History</a>
+<a href="/Pizza/Index" >Add a Pizza</a>
+<a href="/Home/Index" >Logout</a>
+
+</div>
+<hr>
+

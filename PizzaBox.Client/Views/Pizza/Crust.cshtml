@@ -1,0 +1,25 @@
+@using PizzaBox.Data;
+
+@model PizzaBox.Domain.Crust
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; //"../Shared/_NewLayout.cshtml";
+  PizzaBoxDbContext _db = new PizzaBoxDbContext();
+  List<PizzaBox.Domain.Crust> crustList = _db.Crust.ToList(); 
+}
+
+<form action="/Pizza/Crust" method="post">
+  <fieldset name="CrustId">
+    <label>Crust</label>   
+    <select id ="CrustId" name="CrustId">
+      <!-- <select from multiple> -->
+        @foreach (var c in crustList)
+        {<option label=@c.CrustName value=@c.CrustId>@c.CrustName</option>}
+    </select>
+  </fieldset>
+
+  <button typer="submit">submit</button>
+
+  <!-- Html.AntiForgeryToken() -->
+  <!-- create validateion token -->
+</form>

@@ -1,0 +1,23 @@
+@model List<PizzaBox.Domain.User>
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; 
+}
+
+<div class="col-md-6">
+<h2>Registration Successful</h2>
+
+<!-- Dynamic List -->
+  <ul>
+    @foreach (var item in Model)
+      {
+        <li>@item.Username</li>
+      }
+  </ul>
+
+<!-- <a href="/Home/Login" >User</a> -->
+<a href="/User/Login" >Login</a>
+<a href="/home/Index" >Home</a>
+
+</div>
+<hr>

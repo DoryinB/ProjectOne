@@ -1,0 +1,22 @@
+<!-- STRONGLY TYPED VIEW -->
+@model List<PizzaBox.Domain.User>
+<!-- @Model List<string> -->
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; //"../Shared/_NewLayout.cshtml";
+}
+
+<!-- Dynamic List -->
+
+      <ul>@{
+      
+      foreach (var item in Model)
+      {
+        <li>@item.Username</li>
+      }
+    }</ul>
+
+    
+<a title="home" href="/home/index" >Home</a>
+
+<div class="col-md-6"></div>

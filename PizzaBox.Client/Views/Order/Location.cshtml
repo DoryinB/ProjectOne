@@ -1,0 +1,28 @@
+@using PizzaBox.Data;
+
+@model PizzaBox.Domain.Order
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; //"../Shared/_NewLayout.cshtml";
+}
+
+@{
+  PizzaBoxDbContext _db = new PizzaBoxDbContext();
+  List<PizzaBox.Domain.Location> locList = _db.Location.ToList();
+}
+
+<!--------------->
+<form action="/Order/Location" method="post">
+  <fieldset>
+  <select  id ="LocationId" name="LocationId">
+    @foreach (var l in locList)
+        {<option label=@l.LocationName value=@l.LocationId></option> }
+  </select>
+  <button typer="submit">submit</button>
+
+  </fieldset>
+  <!-- Html.AntiForgeryToken() -->
+  <!-- create validateion token -->
+</form>
+<!--------------->
+

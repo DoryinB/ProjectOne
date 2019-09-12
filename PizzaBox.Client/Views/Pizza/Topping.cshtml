@@ -1,0 +1,29 @@
+@using PizzaBox.Data
+
+@model PizzaBox.Domain.Models.ToppOrder
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; //"../Shared/_NewLayout.cshtml";
+  PizzaBoxDbContext _db = new PizzaBoxDbContext();
+  List<PizzaBox.Domain.Topping> topList = _db.Topping.ToList();
+}
+
+
+
+
+
+<form action="/Pizza/Topping" method="post">
+<fieldset name="Checkbox">
+    <!-- as many as you want [usually <=10]-->
+    @{
+    foreach(var t in topList)
+    {<label><input type="checkbox" name="TOp" value="@t.ToppingId">@t.ToppingsName</label>}
+    }
+    
+  </fieldset>
+  
+  <button typer="submit">submit</button>
+  </form>
+
+
+

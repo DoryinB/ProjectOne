@@ -1,0 +1,27 @@
+@model PizzaBox.Domain.Crust
+
+@{
+  Layout = "../Shared/_NewLayoutHome.cshtml"; //"../Shared/_NewLayout.cshtml";
+}
+
+<div class="col-md-6">
+<h2>Register</h2>
+<a href="/home/index" >Home</a>
+
+<!------------->
+<form action="/user/register" method="post">
+  Create Custom Username:<br>
+  <input type="text" id ="Username" name="Username" /><br>
+  <button type="submit">Register</button>
+    <!-- To set value: -->
+    <!-- username_txt.Value=""; -->
+
+</form>
+<!------------->
+
+<h3>Have an account? Login below</h3>
+<a title="Login" href="Login" >Login</a>
+
+</div>
+<hr>
+
